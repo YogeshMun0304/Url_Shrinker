@@ -11,11 +11,7 @@
         "src": "/(.*)",
         "dest": "/"
       }
-    ],
-    "env": {
-      "mongouser": "yogesh",
-"mongopass" : "KZhLSkuTGSWWUdRD"
-
-    }
+    ]
+    
   }
   
