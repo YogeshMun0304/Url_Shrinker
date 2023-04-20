@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+
+}
+.container{
+    background-color: #9f178f;
+    border-radius: 25px;
+    
+    padding: 1rem;
+    margin-top: 20vh;
+    margin-left: 0%;
+    margin-right: 0%;
+
+    width: 100%;
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    
+    animation-name: slide-up;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translate(0%, 100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+  }
+  
+
+.container>h1{
+    color: white;
+    text-align: center;
+}
+.thead{
+    color: white;
+
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:hover{
+    color: blueviolet;
+}
+body{
+    background-color: #b893b2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}

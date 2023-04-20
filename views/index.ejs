@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL-SHRINKER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css" >
+</head>
+
+<body>
+    <div class="container hero">
+        <h1>URL-SHRINKER</h1>
+        <form action="/shortUrls" method="POST" class="my-4" form-inline>
+            <!-- <label for="fullUrl" class="sr-only">Url</label> -->
+            <div style="display: flex;">
+                <input type="url" name="fullUrl" id="fullUrl" required placeholder="Url" class=" form-control ">
+                <button class="btn btn-success mx-2" type="submit" name="hello"id="1">Shrink</button>
+            </div>
+
+        </form>
+        <div class="table-responsive">
+
+        <table class="table table-striped ">
+            <thead class="thead">
+                <tr>
+                    <th>Full Url</th>
+                    <th>Short Url</th>
+                    <th>Clicks</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% shorts.forEach(shorts => { %>
+                    <tr>
+                    
+                        <td><a href="<%= shorts.full%>"><%= shorts.full%></a></td>
+                        <td><a href="<%= shorts.short%>"><%= shorts.short%></a></td>
+                        <td style="color:aliceblue"><%= shorts.clicks%></td>
+                        <td><form class="delete-form" action="/<%= shorts.short %>" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                          </form></td>
+                    </tr>
+                    
+                <%});%>
+                
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+
+</html>
